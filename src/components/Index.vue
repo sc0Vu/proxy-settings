@@ -1,5 +1,5 @@
 <template>
-  <section class="index">
+  <section class="index section">
     <div class="container">
       <div class="field">
         <label class="label">Proxy</label>
@@ -100,6 +100,7 @@ export default {
             return command
           }
         },
+        // TODO: other request method for http
         http: {
           text: 'HTTP',
           validate: () => {
