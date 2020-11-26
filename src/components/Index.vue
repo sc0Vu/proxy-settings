@@ -1,3 +1,8 @@
+<style scope>
+.op {
+  opacity: 0;
+}
+</style>
 <template>
   <section class="index section">
     <div class="container">
@@ -74,8 +79,8 @@
     <div class="container has-text-centered has-background-dark m-4 p-4" v-if="canShowCommand">
       <button :class="copyButtonClass" @click.self="copyCommand">{{ copyButtonText }}</button>
       <code class="has-background-dark has-text-white is-size-3">$ {{ command }}</code>
-      <input id="command" class="hidden" v-model="command"/>
     </div>
+    <input id="command" class="op" v-model="command"/>
   </section>
 </template>
 
