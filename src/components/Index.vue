@@ -102,9 +102,11 @@
       </div>
     </div>
 
-    <div class="container has-text-centered has-background-dark m-4 p-4" v-if="canShowCommand">
-      <button :disabled="!copySupported" :class="copyButtonClass" @click.self="copyCommand">{{ copyButtonText }}</button>
-      <code class="has-background-dark has-text-white is-size-3">$ {{ command }}</code>
+    <div class="container has-text-centered has-background-dark" v-if="canShowCommand">
+      <div class="m-4 p-4">
+        <button :disabled="!copySupported" :class="copyButtonClass" @click.self="copyCommand">{{ copyButtonText }}</button>
+        <code class="has-background-dark has-text-white is-size-3">$ {{ command }}</code>
+      </div>
     </div>
     <input id="command" class="op" v-model="command"/>
   </section>
